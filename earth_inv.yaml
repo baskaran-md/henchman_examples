@@ -1,0 +1,14 @@
+groups:
+  master:
+    hosts:
+      - apollo
+    vars:
+      henchman_username: "root"
+      henchman_keyfile: "/home/ec2-user/.ssh/keys/apollo.pem"
+
+  slave:
+    hosts:
+      - mercury
+    vars:
+      henchman_username: "build"
+      henchman_keyfile: "/home/ec2-user/.ssh/mercury.pem"

@@ -1,0 +1,18 @@
+name: "Demo Playbook"
+sudo: false
+
+vars:
+  include:
+  - earth_vars.yaml
+  message: HelloWorld
+
+hosts:
+  - slave
+
+tasks:
+  - name: Stop iptables
+    shell: cmd="service iptables stop"
+    sudo: true
+
+  - name: Print HelloWorld
+    shell: cmd="echo Location={{ vars.root_dir }}. Message={{ vars.message }}" loglevel=debug
