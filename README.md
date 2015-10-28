@@ -17,3 +17,5 @@
 *./henchman exec {playbook} --inventory {inventory}*
 
 ----
+
+_More **Henchman** Examples_ @ https://github.com/apigee/henchman/tree/master/henchman/test
